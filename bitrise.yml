@@ -31,6 +31,20 @@ workflows:
     - cache-push@2: {}
   primary:
     steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
     - activate-ssh-key@4:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone@5: {}
@@ -38,6 +52,7 @@ workflows:
     - xcode-test@2:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS"
         - scheme: "$BITRISE_SCHEME"
     - deploy-to-bitrise-io@1:
         inputs:
