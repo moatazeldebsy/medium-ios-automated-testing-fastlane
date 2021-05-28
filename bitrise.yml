@@ -52,7 +52,187 @@ workflows:
     - xcode-test@2:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
-        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count 1"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            3"
+        - output_tool: xcodebuild
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1:
+        inputs:
+        - is_compress: 'true'
+        - deploy_path: "$BITRISE_XCRESULT_PATH"
+  Show_me_my_machine_specs:
+    steps:
+    - script@1:
+        title: Show me my machine specs
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+
+            top -l 1 -s 0 | grep PhysMem
+            sysctl -a | grep hw | grep cpu
+
+            sw_vers
+            echo -n "XCode Version: "
+            xcodebuild -version
+
+            #for i in $(seq 1 14400);do date; sleep 1 ; done
+
+            curl -fsSL http://whatismyip.akamai.com/
+        is_always_run: true
+  mmg4_10c_3sim_0k_quantum:
+    steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@5: {}
+    - cocoapods-install@2: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            3"
+        - output_tool: xcodebuild
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1:
+        inputs:
+        - is_compress: 'true'
+        - deploy_path: "$BITRISE_XCRESULT_PATH"
+  mmg4-4c_4c_2sim_0k_quantum:
+    steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@5: {}
+    - cocoapods-install@2: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            2"
+        - output_tool: xcodebuild
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1:
+        inputs:
+        - is_compress: 'true'
+        - deploy_path: "$BITRISE_XCRESULT_PATH"
+  mmg4-2c_alone_1sim_80k_quantum:
+    steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@5: {}
+    - cocoapods-install@2: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            1"
+        - output_tool: xcodebuild
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1:
+        inputs:
+        - is_compress: 'true'
+        - deploy_path: "$BITRISE_XCRESULT_PATH"
+  mmg4-2c_alone_1sim_200k_quantum:
+    steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@5: {}
+    - cocoapods-install@2: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            1"
+        - output_tool: xcodebuild
+        - scheme: "$BITRISE_SCHEME"
+    - deploy-to-bitrise-io@1:
+        inputs:
+        - is_compress: 'true'
+        - deploy_path: "$BITRISE_XCRESULT_PATH"
+  mmg4-2c_alone_1sim_0k_quantum:
+    steps:
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            echo $(date +%s)
+            NOW=$(date +%s)
+            DERIVED_DATA_ARGS_IN=${BITRISE_SOURCE_DIR}/DerivedData_${NOW}
+            echo $DERIVED_DATA_ARGS_IN
+            envman add --key DERIVED_DATA_ARGS --value "-derivedDataPath '$DERIVED_DATA_ARGS_IN'"
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@5: {}
+    - cocoapods-install@2: {}
+    - xcode-test@2:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - xcodebuild_test_options: "$DERIVED_DATA_ARGS -parallel-testing-worker-count
+            1"
         - output_tool: xcodebuild
         - scheme: "$BITRISE_SCHEME"
     - deploy-to-bitrise-io@1:
