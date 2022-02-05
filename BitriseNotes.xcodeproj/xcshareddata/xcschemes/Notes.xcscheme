@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
                BuildableName = "Notes.app"
-               BlueprintName = "Notes"
-               ReferencedContainer = "container:Notes.xcodeproj">
+               BlueprintName = "BitriseNotes"
+               ReferencedContainer = "container:BitriseNotes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,8 +32,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
             BuildableName = "Notes.app"
-            BlueprintName = "Notes"
-            ReferencedContainer = "container:Notes.xcodeproj">
+            BlueprintName = "BitriseNotes"
+            ReferencedContainer = "container:BitriseNotes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <TestPlans>
@@ -49,8 +49,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0ECB5BBD2036EE9400655E0F"
                BuildableName = "NotesTests.xctest"
-               BlueprintName = "NotesTests"
-               ReferencedContainer = "container:Notes.xcodeproj">
+               BlueprintName = "BitriseNotesTests"
+               ReferencedContainer = "container:BitriseNotes.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -59,8 +59,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0ECB5BC82036EE9400655E0F"
                BuildableName = "NotesUITests.xctest"
-               BlueprintName = "NotesUITests"
-               ReferencedContainer = "container:Notes.xcodeproj">
+               BlueprintName = "BitriseNotesUITests"
+               ReferencedContainer = "container:BitriseNotes.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
             BuildableName = "Notes.app"
-            BlueprintName = "Notes"
-            ReferencedContainer = "container:Notes.xcodeproj">
+            BlueprintName = "BitriseNotes"
+            ReferencedContainer = "container:BitriseNotes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -98,8 +98,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
             BuildableName = "Notes.app"
-            BlueprintName = "Notes"
-            ReferencedContainer = "container:Notes.xcodeproj">
+            BlueprintName = "BitriseNotes"
+            ReferencedContainer = "container:BitriseNotes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
