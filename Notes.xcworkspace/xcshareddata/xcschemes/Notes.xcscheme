@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
-               BuildableName = "BitriseNotes.app"
+               BuildableName = "Notes.app"
                BlueprintName = "Notes"
                ReferencedContainer = "container:Notes.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0ECB5BC82036EE9400655E0F"
-               BuildableName = "BitriseNotesUITests.xctest"
+               BuildableName = "NotesUITests.xctest"
                BlueprintName = "NotesUITests"
                ReferencedContainer = "container:Notes.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
-            BuildableName = "BitriseNotes.app"
+            BuildableName = "Notes.app"
             BlueprintName = "Notes"
             ReferencedContainer = "container:Notes.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0ECB5BA62036EE9400655E0F"
-            BuildableName = "BitriseNotes.app"
+            BuildableName = "Notes.app"
             BlueprintName = "Notes"
             ReferencedContainer = "container:Notes.xcodeproj">
          </BuildableReference>
