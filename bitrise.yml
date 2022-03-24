@@ -830,7 +830,7 @@ workflows:
             # debug log
             set -x
 
-            echo "ui_test_api26 Web"
+            echo "ui_test_api26 Repo"
   ui_test_api30:
     steps:
     - script@1:
@@ -843,7 +843,7 @@ workflows:
             # debug log
             set -x
 
-            echo "ui_test_api30 Web"
+            echo "ui_test_api30 Repo"
   ui_test_prepare:
     steps:
     - script@1:
@@ -856,7 +856,7 @@ workflows:
             # debug log
             set -x
 
-            echo "ui_test_prepare Web"
+            echo "ui_test_prepare Repo"
   ui_test_shard_1:
     steps:
     - script@1:
@@ -869,7 +869,7 @@ workflows:
             # debug log
             set -x
 
-            echo "Shard 1 Web"
+            echo "Shard 1 Repo"
   ui_test_shard_2:
     steps:
     - script@1:
@@ -882,7 +882,7 @@ workflows:
             # debug log
             set -x
 
-            echo "Shard 2 Web"
+            echo "Shard 2 Repo"
 app:
   envs:
   - opts:
