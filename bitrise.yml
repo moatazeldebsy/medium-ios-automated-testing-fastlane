@@ -821,7 +821,7 @@ workflows:
   ui_test_api26:
     steps:
     - script@1:
-        title: ui_test_api26 Web
+        title: ui_test_api26 Repo
         inputs:
         - content: |-
             #!/usr/bin/env bash
@@ -831,10 +831,10 @@ workflows:
             set -x
 
             echo "ui_test_api26 Repo"
-  ui_test_api30:
+  ui_test_api30_repo:
     steps:
     - script@1:
-        title: ui_test_api30 Web
+        title: ui_test_api30 Repo
         inputs:
         - content: |-
             #!/usr/bin/env bash
@@ -844,10 +844,10 @@ workflows:
             set -x
 
             echo "ui_test_api30 Repo"
-  ui_test_prepare:
+  ui_test_prepare_repo:
     steps:
     - script@1:
-        title: ui_test_prepare Web
+        title: ui_test_prepare Repo
         inputs:
         - content: |-
             #!/usr/bin/env bash
@@ -857,10 +857,10 @@ workflows:
             set -x
 
             echo "ui_test_prepare Repo"
-  ui_test_shard_1:
+  ui_test_shard_1_repo:
     steps:
     - script@1:
-        title: Shard 1 Web
+        title: Shard 1 Repo
         inputs:
         - content: |-
             #!/usr/bin/env bash
@@ -870,10 +870,10 @@ workflows:
             set -x
 
             echo "Shard 1 Repo"
-  ui_test_shard_2:
+  ui_test_shard_2_repo:
     steps:
     - script@1:
-        title: Shard 2 Web
+        title: Shard 2 Repo
         inputs:
         - content: |-
             #!/usr/bin/env bash
